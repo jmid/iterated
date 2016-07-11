@@ -43,34 +43,34 @@ If you now press the 'Analyze'-bottom you should see output of this form:
     
     Iteration 0
     ------------
-                                  ([], ε, Top*)
+                                  ([], Îµ, Top*)
     1:0? x;                              ([x -> [-oo;+oo]], ?([0;0], [-oo;+oo]), Top*)
     2:skip;                              ([x -> [-oo;+oo]], ?([0;0], [-oo;+oo]), Top*)
     
     
-    Collective prefix': (ε + ?([0;0], [-oo;+oo]))
+    Collective prefix': (Îµ + ?([0;0], [-oo;+oo]))
     
     
-                                  ([], ε, (ε + ?([0;0], [-oo;+oo])))
-    3:0! 42;                              ([], !([0;0], [42;42]), ε)
-    4:skip;                              ([], !([0;0], [42;42]), ε) 
+                                  ([], Îµ, (Îµ + ?([0;0], [-oo;+oo])))
+    3:0! 42;                              ([], !([0;0], [42;42]), Îµ)
+    4:skip;                              ([], !([0;0], [42;42]), Îµ) 
     
-    Collective prefix': (ε + !([0;0], [42;42]))
+    Collective prefix': (Îµ + !([0;0], [42;42]))
     
     Iteration 1
     ------------
-                                  ([], ε, (ε + !([0;0], [42;42])))
-    1:0? x;                              ([x -> [42;42]], ?([0;0], [42;42]), ε)
-    2:skip;                              ([x -> [42;42]], ?([0;0], [42;42]), ε) 
+                                  ([], Îµ, (Îµ + !([0;0], [42;42])))
+    1:0? x;                              ([x -> [42;42]], ?([0;0], [42;42]), Îµ)
+    2:skip;                              ([x -> [42;42]], ?([0;0], [42;42]), Îµ) 
     
-    Collective prefix': (ε + ?([0;0], [42;42]))
+    Collective prefix': (Îµ + ?([0;0], [42;42]))
     
     
-                                  ([], ε, (ε + ?([0;0], [42;42])))
-    3:0! 42;                              ([], !([0;0], [42;42]), ε)
-    4:skip;                              ([], !([0;0], [42;42]), ε) 
+                                  ([], Îµ, (Îµ + ?([0;0], [42;42])))
+    3:0! 42;                              ([], !([0;0], [42;42]), Îµ)
+    4:skip;                              ([], !([0;0], [42;42]), Îµ) 
     
-    Collective prefix': (ε + !([0;0], [42;42]))
+    Collective prefix': (Îµ + !([0;0], [42;42]))
     
     Reached fixed point, bailing early
 
@@ -103,7 +103,7 @@ should therefore be understood as
 In addition, we compute and print the collective communication prefix
 of the process. For example, the first such
 
-    Collective prefix': (ε + ?([0;0], [-oo;+oo]))
+    Collective prefix': (Îµ + ?([0;0], [-oo;+oo]))
 
 represents a prefix-closure of the above read.
 
@@ -146,19 +146,19 @@ To re-run the QuickCheck tests in the terminal first build the quickcheck tests 
     $ ./redomcheck.byte 
     check 1209 properties...
     testing property 'parity.d increasing in argument 1'...
-      [✔] passed 1000 tests (0 preconditions failed)
+      [â] passed 1000 tests (0 preconditions failed)
     testing property 'parity.d invariant in argument 1'...
-      [✔] passed 1000 tests (0 preconditions failed)
+      [â] passed 1000 tests (0 preconditions failed)
     testing property 'parity.d increasing in argument 2'...
-      [✔] passed 1000 tests (0 preconditions failed)
+      [â] passed 1000 tests (0 preconditions failed)
 
     [...many lines cut...]
 
-      [✔] passed 1000 tests (0 preconditions failed)
+      [â] passed 1000 tests (0 preconditions failed)
     testing property 'Prodlattice(Storelattice(interval),interval,interval).widening invariant in argument 2'...
-      [✔] passed 1000 tests (0 preconditions failed)
+      [â] passed 1000 tests (0 preconditions failed)
     tests run in 4480.10s
-    [✔] Success! (passed 1209 tests)
+    [â] Success! (passed 1209 tests)
 
 Requirements:
 -------------
@@ -178,7 +178,7 @@ randomized, property-based testing (QuickChecking) of lattices and
 lattice operations.  It is furthermore described in the paper
 
     QuickChecking Static Analysis Properties
-    Jan Midtgaard and Anders MÃ¸ller, ICST'15
+    Jan Midtgaard and Anders Mâøller, ICST'15
     http://janmidtgaard.dk/papers/Midtgaard-Moeller:ICST15.pdf  
 
 The module is also separately available [here](https://github.com/jmid/lcheck).
