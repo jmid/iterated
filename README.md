@@ -43,34 +43,34 @@ If you now press the 'Analyze'-bottom you should see output of this form:
     
     Iteration 0
     ------------
-                                  ([], Îµ, Top*)
+                                  ([], ε, Top*)
     1:0? x;                              ([x -> [-oo;+oo]], ?([0;0], [-oo;+oo]), Top*)
     2:skip;                              ([x -> [-oo;+oo]], ?([0;0], [-oo;+oo]), Top*)
     
     
-    Collective prefix': (Îµ + ?([0;0], [-oo;+oo]))
+    Collective prefix': (ε + ?([0;0], [-oo;+oo]))
     
     
-                                  ([], Îµ, (Îµ + ?([0;0], [-oo;+oo])))
-    3:0! 42;                              ([], !([0;0], [42;42]), Îµ)
-    4:skip;                              ([], !([0;0], [42;42]), Îµ) 
+                                  ([], ε, (ε + ?([0;0], [-oo;+oo])))
+    3:0! 42;                              ([], !([0;0], [42;42]), ε)
+    4:skip;                              ([], !([0;0], [42;42]), ε) 
     
-    Collective prefix': (Îµ + !([0;0], [42;42]))
+    Collective prefix': (ε + !([0;0], [42;42]))
     
     Iteration 1
     ------------
-                                  ([], Îµ, (Îµ + !([0;0], [42;42])))
-    1:0? x;                              ([x -> [42;42]], ?([0;0], [42;42]), Îµ)
-    2:skip;                              ([x -> [42;42]], ?([0;0], [42;42]), Îµ) 
+                                  ([], ε, (ε + !([0;0], [42;42])))
+    1:0? x;                              ([x -> [42;42]], ?([0;0], [42;42]), ε)
+    2:skip;                              ([x -> [42;42]], ?([0;0], [42;42]), ε) 
     
-    Collective prefix': (Îµ + ?([0;0], [42;42]))
+    Collective prefix': (ε + ?([0;0], [42;42]))
     
     
-                                  ([], Îµ, (Îµ + ?([0;0], [42;42])))
-    3:0! 42;                              ([], !([0;0], [42;42]), Îµ)
-    4:skip;                              ([], !([0;0], [42;42]), Îµ) 
+                                  ([], ε, (ε + ?([0;0], [42;42])))
+    3:0! 42;                              ([], !([0;0], [42;42]), ε)
+    4:skip;                              ([], !([0;0], [42;42]), ε) 
     
-    Collective prefix': (Îµ + !([0;0], [42;42]))
+    Collective prefix': (ε + !([0;0], [42;42]))
     
     Reached fixed point, bailing early
 
@@ -103,7 +103,7 @@ should therefore be understood as
 In addition, we compute and print the collective communication prefix
 of the process. For example, the first such
 
-    Collective prefix': (Îµ + ?([0;0], [-oo;+oo]))
+    Collective prefix': (ε + ?([0;0], [-oo;+oo]))
 
 represents a prefix-closure of the above read.
 
@@ -146,19 +146,19 @@ To re-run the QuickCheck tests in the terminal first build the quickcheck tests 
     $ ./redomcheck.byte 
     check 1209 properties...
     testing property 'parity.d increasing in argument 1'...
-      [â] passed 1000 tests (0 preconditions failed)
+      [✔] passed 1000 tests (0 preconditions failed)
     testing property 'parity.d invariant in argument 1'...
-      [â] passed 1000 tests (0 preconditions failed)
+      [✔] passed 1000 tests (0 preconditions failed)
     testing property 'parity.d increasing in argument 2'...
-      [â] passed 1000 tests (0 preconditions failed)
+      [✔] passed 1000 tests (0 preconditions failed)
 
     [...many lines cut...]
 
-      [â] passed 1000 tests (0 preconditions failed)
+      [✔] passed 1000 tests (0 preconditions failed)
     testing property 'Prodlattice(Storelattice(interval),interval,interval).widening invariant in argument 2'...
-      [â] passed 1000 tests (0 preconditions failed)
+      [✔] passed 1000 tests (0 preconditions failed)
     tests run in 4480.10s
-    [â] Success! (passed 1209 tests)
+    [✔] Success! (passed 1209 tests)
 
 Requirements:
 -------------
