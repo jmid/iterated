@@ -178,7 +178,7 @@ randomized, property-based testing (QuickChecking) of lattices and
 lattice operations.  It is furthermore described in the paper
 
     QuickChecking Static Analysis Properties
-    Jan Midtgaard and Anders MÃ¸ller, ICST'15
+    Jan Midtgaard and Anders M�ller, ICST'15
     http://janmidtgaard.dk/papers/Midtgaard-Moeller:ICST15.pdf  
 
 The module is also separately available [here](https://github.com/jmid/lcheck).
